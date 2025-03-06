@@ -1,12 +1,14 @@
 package br.com.fiap.pb_flix_api.model;
 
+import java.util.Random;
+
 public class Category {
     private Long id;
     private String name;
     private String icon;
 
     public Category(Long id, String name, String icon) {
-        this.id = id;
+        this.id = Math.abs(new Random().nextLong());
         this.name = name;
         this.icon = icon;
     }
@@ -23,5 +25,13 @@ public class Category {
         return icon;
     }
 
-    
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return id + "-" + name + "-" + icon;
+    }
+
 }
