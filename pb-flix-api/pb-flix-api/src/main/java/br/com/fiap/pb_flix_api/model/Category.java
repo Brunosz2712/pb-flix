@@ -1,37 +1,56 @@
 package br.com.fiap.pb_flix_api.model;
 
-import java.util.Random;
+import java.util.Date;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Category {
+    @Id
+    @GeneratedValue(
+        strategy = GenerationType.IDENTITY
+    )
     private Long id;
-    private String name;
-    private String icon;
+    private String film;
+    private String gender;
+    private Date releaseDate;
+    private  String sinopse;
 
-    public Category(Long id, String name, String icon) {
-        this.id = Math.abs(new Random().nextLong());
-        this.name = name;
-        this.icon = icon;
-    }
-
+    
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getFilm() {
+        return film;
     }
 
-    public String getIcon() {
-        return icon;
+    public String getGender() {
+        return gender;
     }
 
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    public String getSinopse() {
+        return sinopse;
+    }
+
+    
     public void setId(Long id) {
         this.id = id;
     }
 
-    @Override
     public String toString() {
-        return id + "-" + name + "-" + icon;
-    }
+        String var10000 = String.valueOf(this.id);
+        return var10000 + " - " + this.film + " - " + this.gender + " - " + this.releaseDate + " - " + this.sinopse;
+     }
 
 }
+
+
