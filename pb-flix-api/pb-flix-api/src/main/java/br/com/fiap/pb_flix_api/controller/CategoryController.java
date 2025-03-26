@@ -40,7 +40,7 @@ public class CategoryController {
     @PostMapping("/categories")
     @ResponseStatus(HttpStatus.CREATED)
     public Category create(@RequestBody Category category) {
-        log.info("Cadastrando categoria " + category.getFilm());
+        log.info("Cadastrando categoria " + category.getCategory());
         return (Category)this.repository.save(category);
     }
 

@@ -15,32 +15,41 @@ public class Category {
         strategy = GenerationType.IDENTITY
     )
     private Long id;
-    private String film;
-    private String gender;
-    private Date releaseDate;
-    private  String sinopse;
+    private String category;
+    private String comedia;
+    private String drama;
+    private String suspense;
+    private String terror;
+    private String fixaoCientifica;
+   
 
-    
     public Long getId() {
         return id;
     }
 
-    public String getFilm() {
-        return film;
+    public String getCategory() {
+        return category;
+    }
+    
+    public String getComedia() {
+        return comedia;
     }
 
-    public String getGender() {
-        return gender;
+    public String getDrama() {
+        return drama;
     }
 
-    public Date getReleaseDate() {
-        return releaseDate;
+    public String getSuspense() {
+        return suspense;
     }
 
-    public String getSinopse() {
-        return sinopse;
+    public String getTerror() {
+        return terror;
     }
 
+    public String getFixaoCientifica() {
+        return fixaoCientifica;
+    }
     
     public void setId(Long id) {
         this.id = id;
@@ -48,7 +57,7 @@ public class Category {
 
     public String toString() {
         String var10000 = String.valueOf(this.id);
-        return var10000 + " - " + this.film + " - " + this.gender + " - " + this.releaseDate + " - " + this.sinopse;
+        return var10000 + " - " + this.comedia + " - " + this.drama + " - " + this.suspense + " - " + this.terror;
      }
 
 }
