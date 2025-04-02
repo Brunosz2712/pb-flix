@@ -14,39 +14,19 @@ public class Category {
     )
     private Long id;
     private String nameMovie;
-    private String comedia;
-    private String drama;
-    private String suspense;
-    private String terror;
-    private String fixaoCientifica;
-   
-
-    public Long getId() {
-        return id;
-    }
+    private String gender;
+    private String icon;
 
     public String getNameMovie() {
         return nameMovie;
     }
     
-    public String getComedia() {
-        return comedia;
+    public String getGender() {
+        return gender;
     }
 
-    public String getDrama() {
-        return drama;
-    }
-
-    public String getSuspense() {
-        return suspense;
-    }
-
-    public String getTerror() {
-        return terror;
-    }
-
-    public String getFixaoCientifica() {
-        return fixaoCientifica;
+    public String getIcon() {
+        return icon;
     }
     
     public void setId(Long id) {
@@ -55,7 +35,7 @@ public class Category {
 
     public String toString() {
         String var10000 = String.valueOf(this.id);
-        return var10000 + " - " + this.nameMovie + " - " + this.comedia + " - " + this.drama + " - " + this.suspense + " - " + this.terror + " - " + this.fixaoCientifica;
+        return var10000 + " - " + this.nameMovie + " - " + this.gender + " - " + this.icon;
      }
 
 }
