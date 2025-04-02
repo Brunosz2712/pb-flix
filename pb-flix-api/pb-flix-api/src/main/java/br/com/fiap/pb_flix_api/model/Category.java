@@ -1,7 +1,5 @@
 package br.com.fiap.pb_flix_api.model;
 
-import java.util.Date;
-
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,7 +13,7 @@ public class Category {
         strategy = GenerationType.IDENTITY
     )
     private Long id;
-    private String category;
+    private String nameMovie;
     private String comedia;
     private String drama;
     private String suspense;
@@ -27,8 +25,8 @@ public class Category {
         return id;
     }
 
-    public String getCategory() {
-        return category;
+    public String getNameMovie() {
+        return nameMovie;
     }
     
     public String getComedia() {
