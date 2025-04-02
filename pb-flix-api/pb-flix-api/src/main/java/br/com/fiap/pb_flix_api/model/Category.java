@@ -55,7 +55,7 @@ public class Category {
 
     public String toString() {
         String var10000 = String.valueOf(this.id);
-        return var10000 + " - " + this.comedia + " - " + this.drama + " - " + this.suspense + " - " + this.terror;
+        return var10000 + " - " + this.nameMovie + " - " + this.comedia + " - " + this.drama + " - " + this.suspense + " - " + this.terror + " - " + this.fixaoCientifica;
      }
 
 }
